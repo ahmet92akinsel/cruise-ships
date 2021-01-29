@@ -1,10 +1,8 @@
-function Ship() {
-    const ship = new Ship();
+function Ship(startingPort) {
     this.startingPort = startingPort
 };
 
-module.exports = {
-    Ship
-};
+module.exports = Ship;
+
 
 
