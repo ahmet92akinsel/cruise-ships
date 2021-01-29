@@ -9,7 +9,7 @@
 function Ship(startingPort) {
     this.startingPort = startingPort
     this.setSail = function () {
-        return '';
+        return 
     };
     
 };
