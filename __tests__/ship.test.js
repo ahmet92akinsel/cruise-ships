@@ -21,3 +21,4 @@ describe('set sail function', () => {
         expect(ship.startingPort).toBeFalsy();
     });
 });
+describe('',)

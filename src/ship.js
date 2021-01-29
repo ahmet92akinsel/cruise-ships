@@ -4,8 +4,6 @@
     }
 }; */
 
-
-
 function Ship(startingPort) {
     this.startingPort = startingPort
 };
@@ -13,6 +11,8 @@ function Ship(startingPort) {
 Ship.prototype.setSail = function() {
     this.startingPort = '';
 };
+
+
 
 module.exports = Ship;
 
