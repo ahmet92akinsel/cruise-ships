@@ -1,0 +1,9 @@
+  it('can set sail', () => {
+        
+        const port = new Port('Dover')
+        const itinerary = new Itinerary([port]);
+        const ship = new Ship(itinerary);
+        ship.setSail();
+        expect(ship.currentPort).toBeFalsy();
+        expect(ship.previusPort).toBe(port);
+    });
