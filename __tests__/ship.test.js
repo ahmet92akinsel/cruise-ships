@@ -60,14 +60,8 @@ describe('ship cant sail without itinerary', () => {
       });
 });
 
-describe('addShip method',() => {
-    it('can add ship', () => {
-
-    });
-});
-
-describe('removeShip method', () => {
-    it('can remove ship', () => {
-
+describe('gets added to port on instantiation', () => {
+    it('',()=> {
+        expect(ship.currentPort.ships).toEqual();
     });
 });
