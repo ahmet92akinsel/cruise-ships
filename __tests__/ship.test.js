@@ -59,3 +59,15 @@ describe('ship cant sail without itinerary', () => {
         expect(() => ship.setSail()).toThrowError('End of itinerary reached');
       });
 });
+
+describe('addShip method',() => {
+    it('can add ship', () => {
+
+    });
+});
+
+describe('removeShip method', () => {
+    it('can remove ship', () => {
+
+    });
+});

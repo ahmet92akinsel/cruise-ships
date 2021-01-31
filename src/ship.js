@@ -29,6 +29,14 @@ Ship.prototype.dock = function() {
     this.currentPort = itinerary.ports[previousIndex + 1];
 };
 
+Ship.prototype.addShip = function () {
+
+};
+
+Ship.prototype.removeShip = function () {
+
+};
+
 
 
 module.exports = Ship;
