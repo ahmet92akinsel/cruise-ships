@@ -11,12 +11,12 @@ describe('addShip method',() => {
     const ship = {};
     
     port.addShip(ship);
-    expect(port.ships).toEqual(ship);
+    expect(port.ships).toContain(ship);
   });
 });
 
-describe('removeShip method', () => {
+/*describe('removeShip method', () => {
   it('can remove ship', () => {
 
   });
-});
+});*/

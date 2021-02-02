@@ -60,8 +60,9 @@ describe('ship cant sail without itinerary', () => {
       });
 });
 
-describe('gets added to port on instantiation', () => {
-    it('',()=> {
+/*describe('gets added to port on instantiation', () => {
+    it('add ports',()=> {
+        const ship = new Ship(ships)
         expect(ship.currentPort.ships).toEqual();
     });
-});
+});*/
