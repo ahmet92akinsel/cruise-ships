@@ -1,3 +1,5 @@
+const Ship = require("./ship");
+
 class Port {
     constructor (name,ship) {
         this.name = name; 

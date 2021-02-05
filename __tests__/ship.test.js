@@ -3,6 +3,14 @@ const Ship = require('../src/ship.js');
 const Port = require('../src/port.js');
 const Itinerary = require('../src/Itinerary');
 
+describe('tests',() => {
+
+
+});
+
+beforeEach(() => {
+
+});
 
 describe('Ship',() => {
     it('can be instantiated',() => {        
@@ -19,7 +27,7 @@ describe('Ship',() => {
         const ship = new Ship(itinerary);
         expect(ship.currentPort).toBe(port);
     });
-describe('set sail function', () => {
+describe('set sail method', () => {
     it('can set sail', () => {
         const dover = new Port('Dover');
         const calais = new Port('Calais');

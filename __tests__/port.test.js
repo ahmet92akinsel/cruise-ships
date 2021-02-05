@@ -6,9 +6,9 @@ describe('Port', () => {
     });
 });
 describe('addShip method',() => {
-  it('can add ship', () => {
+  it('can add ship to the port', () => {
     const port = new Port('Dover');
-    const ship = {};
+    const ship = [ships];
     
     port.addShip(ship);
     expect(port.ships).toContain(ship);
@@ -16,7 +16,9 @@ describe('addShip method',() => {
 });
 
 /*describe('removeShip method', () => {
-  it('can remove ship', () => {
+  it('can remove ship from the port', () => {
+    port.removeShip(ship);
+    expect().toEqual([]);
 
   });
 });*/

@@ -1,8 +1,3 @@
-/*class Ship {
-    constructor(startingPort){
-        this.startingPort = startingPort;
-    }
-}; */
 
 function Ship(itinerary) {
     this.itinerary = itinerary;
