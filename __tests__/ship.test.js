@@ -9,6 +9,10 @@ describe('tests',() => {
 });
 
 beforeEach(() => {
+    let Dover;
+    let Calais;
+    let ship;
+    let itinerary;
 
 });
 
@@ -52,6 +56,7 @@ describe('dock method', () => {
         ship.dock();
 
         expect(ship.currentPort).toBe(calais);
+        expect(calais.ships).toContain(ship);
     });
 });
 
@@ -68,10 +73,11 @@ describe('ship cant sail without itinerary', () => {
         expect(() => ship.setSail()).toThrowError('End of itinerary reached');
       });
 });
+    it('gets added to port on instantiation', () => {
 
-/*describe('gets added to port on instantiation', () => {
-    it('add ports',()=> {
-        const ship = new Ship(ships)
-        expect(ship.currentPort.ships).toEqual();
-    });
-});*/
+    const dover = new Port('Dover');
+    const itinerary = new Itinerary([dover]);
+    const ship = new Ship(itinerary);
+  
+    expect(dover.ships).toContain(ship);
+  });
