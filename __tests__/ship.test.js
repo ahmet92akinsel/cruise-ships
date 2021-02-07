@@ -37,6 +37,7 @@ describe('set sail method', () => {
         ship.setSail();
       
         expect(ship.currentPort).toBeFalsy();
+        expect(dover.ships).toContain(ship);
       });
 });
 

@@ -1,18 +1,20 @@
-const Ship = require("./ship");
 
 class Port {
-    constructor (name,ship) {
+    constructor (name) {
         this.name = name; 
-        this.ship = ship;      
+        this.ships = [];      
     };
-};
+
    
-Port.prototype.addShip = function () {
-    const ship = this.ship;
+addShip(ship) {
+   this.ships.push(ship);
+    
 };
 
-Port.prototype.removeShip = function () {
+removeShip() {
+    this.ships.filter(x => (x));
     
 }; 
+};
 
 module.exports = Port;
