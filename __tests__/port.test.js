@@ -1,5 +1,19 @@
 const Port = require('../src/port.js')
 
+
+
+describe('tests',() => {  
+
+  let dover;
+  let calais;
+  let port;
+
+  beforeEach(() => {
+      dover = new Port('Dover');
+      calais = new Port('Calais');
+      port = new Port;    
+  });
+
 describe('Port', () => {
    it('can be instantiated',() => {
      expect(new Port()).toBeInstanceOf(Object);
@@ -7,9 +21,7 @@ describe('Port', () => {
 });
 describe('addShip method',() => {
   it('can add ship to the port', () => {
-    const port = new Port('Dover');
-    const calais = new Port('Calais');
-
+    
     const ship = [];
     
     port.addShip(ship);
@@ -19,12 +31,12 @@ describe('addShip method',() => {
 
 describe('removeShip method', () => {
   it('can remove ship from the port', () => {
-    const port = new Port('Dover');
-    const calais = new Port('Calais');
+   
 
     const ship = [];
     port.removeShip(ship);
     expect(port.ships).toEqual([]);
 
   });
+});
 });
