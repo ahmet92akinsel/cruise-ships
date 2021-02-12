@@ -13,6 +13,7 @@ addShip(ship) {
 
 removeShip() {
     this.ships.filter(ship => (ship));
+    //this.ships.pop();
     
 }; 
 };

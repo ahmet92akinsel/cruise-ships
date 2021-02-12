@@ -1,17 +1,15 @@
 const Port = require('../src/port.js')
 
-
-
 describe('tests',() => {  
 
-  let dover;
-  let calais;
+  
   let port;
+  let port1;
 
   beforeEach(() => {
-      dover = new Port('Dover');
-      calais = new Port('Calais');
-      port = new Port;    
+      port = new Port('Dover');
+      port1 = new Port('Calais');
+         
   });
 
 describe('Port', () => {
@@ -19,17 +17,28 @@ describe('Port', () => {
      expect(new Port()).toBeInstanceOf(Object);
     });
 });
-describe('addShip method',() => {
+
+describe('name property', () => {
+  test('sets the name property', () => {
+      const port = new Port ('Dover');
+      const port1 = new Port('Calais')    
+
+      expect(port.name).toEqual('Dover');
+      expect(port1.name).toEqual('Calais');
+  });
+});
+describe('add new ship method',() => {
   it('can add ship to the port', () => {
     
     const ship = [];
+    //const ship = jest.fn();
     
     port.addShip(ship);
     expect(port.ships).toContain(ship);
   });
 });
 
-describe('removeShip method', () => {
+describe('remove ship method', () => {
   it('can remove ship from the port', () => {
    
 

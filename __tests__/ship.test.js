@@ -59,8 +59,6 @@ describe('ship cant sail without itinerary', () => {
       });
 });
     it('gets added to port on instantiation', () => {
-
-  
     expect(dover.ships).toContain(ship);
   });
 });
