@@ -10,14 +10,17 @@ describe('tests',() => {
         calais = new Port('Calais');    
     });
 
-describe('Itinerary',() => {
-    it('can be instantiated',() => {
+describe('Itinerary constructor',() => {
+    it('should create a new itinerary object(instance)',() => {
         expect(new Itinerary()).toBeInstanceOf(Object);
     });
-
-    it('has ports', () => {
+});
+describe('port property',() => {
+    it('itinerary has ports', () => {
         const itinerary = new Itinerary([dover,calais]);
         expect(itinerary.ports).toEqual([dover,calais]);
     });
-    });
 });
+});
+   
+    

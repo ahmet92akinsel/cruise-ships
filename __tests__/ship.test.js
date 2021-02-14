@@ -1,4 +1,4 @@
-/*globals describe it expect*/
+
 const Ship = require('../src/ship.js');
 const Port = require('../src/port.js');
 const Itinerary = require('../src/Itinerary');
@@ -19,22 +19,21 @@ beforeEach(() => {
 });
 
 describe('Ship',() => {
-    it('can be instantiated',() => {        
-        
-        expect(ship).toBeInstanceOf(Object);
+    it('should create a ship object',() => {    
+      expect(ship).toBeInstanceOf(Object);
     });
 });
-    it('has a starting port', () => {
-       
-        expect(ship.currentPort).toBe(dover);
+    it('has a starting port', () => { 
+      expect(ship.currentPort).toBe(dover);
     });
+
+
 describe('set sail method', () => {
     it('can set sail', () => {
        
-        ship.setSail();
-      
-        expect(ship.currentPort).toBeFalsy();
-        expect(dover.ships).not.toContain(Ship);
+ship.setSail();      
+    expect(ship.currentPort).toBeFalsy();
+    expect(dover.ships).not.toContain(ship);
       });
 });
 

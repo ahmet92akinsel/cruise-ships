@@ -2,6 +2,7 @@
 class Port {
     constructor (name) {
         this.name = name; 
+        this.port = 'Dover';
         this.ships = [];      
     };
 
@@ -13,7 +14,7 @@ addShip(ship) {
 
 removeShip() {
     this.ships.filter(ship => (ship));
-    //this.ships.pop();
+    //this.ship.pop();
     
 }; 
 };

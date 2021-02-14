@@ -1,37 +1,33 @@
 const Port = require('../src/port.js')
 
 describe('tests',() => {  
-
   
-  let port;
-  let port1;
+  let port;;
 
   beforeEach(() => {
-      port = new Port('Dover');
-      port1 = new Port('Calais');
+      port = new Port('Dover');      
          
   });
 
 describe('Port', () => {
    it('can be instantiated',() => {
+
      expect(new Port()).toBeInstanceOf(Object);
     });
 });
 
 describe('name property', () => {
-  test('sets the name property', () => {
-      const port = new Port ('Dover');
-      const port1 = new Port('Calais')    
-
+  it('sets the name property', () => {
+      const port = new Port ('Dover');       
       expect(port.name).toEqual('Dover');
-      expect(port1.name).toEqual('Calais');
+      
   });
 });
 describe('add new ship method',() => {
   it('can add ship to the port', () => {
     
-    const ship = [];
-    //const ship = jest.fn();
+    //const ship = [];
+    const ship = jest.fn();
     
     port.addShip(ship);
     expect(port.ships).toContain(ship);
@@ -40,12 +36,16 @@ describe('add new ship method',() => {
 
 describe('remove ship method', () => {
   it('can remove ship from the port', () => {
-   
 
-    const ship = [];
+    const ship = jest.fn();      
+    const blackPearl = jest.fn();
+    const flyingDutchman = jest.fn();
+   
     port.removeShip(ship);
-    expect(port.ships).toEqual([]);
+    port.addShip(blackPearl);
+    port.removeShip(flyingDutchman);
+    expect(port.ships).toEqual([blackPearl]);
 
   });
-});
+ });
 });
