@@ -29,20 +29,17 @@ describe('Ship',() => {
 
 
 describe('set sail method', () => {
-    it('can set sail', () => {
-       
-ship.setSail();      
+    it('can set sail', () => {       
+    ship.setSail();      
     expect(ship.currentPort).toBeFalsy();
     expect(dover.ships).not.toContain(ship);
       });
 });
 
 describe('dock method', () => {
-    it('can dock at a different port',()=>{
-       
+    it('can dock at a different port',()=> {       
         ship.setSail();
         ship.dock();
-
         expect(ship.currentPort).toBe(calais);
         expect(calais.ships).toContain(ship);
     });
